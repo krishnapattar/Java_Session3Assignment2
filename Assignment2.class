@@ -1,0 +1,41 @@
+/*
+ * Write a program in Java to show the use of super and this keyword with a constructor, methods,
+
+variables
+ */
+
+class Super {//proper naming conventions is used 
+
+	int x;
+	Super(int x)
+	{
+		this.x = x;
+	}
+	
+	void display1()//method defined
+	{
+		System.out.println("super x = "+x);
+	}
+}
+class Sub extends Super
+{
+	int y;
+	void sub (int x, int y)
+	{
+		super(x);
+		this.y = y;
+	}
+	void display()//method defined
+	{
+		System.out.println("super x = "+x);
+		System.out.println("super y = "+y);
+	}
+	
+}
+class OverrideTest
+{
+	public static void main(String args []){// Main methods starts
+		Sub s1 = new Sub(100,200);
+		s1.display();
+	}
+	}// class closed
